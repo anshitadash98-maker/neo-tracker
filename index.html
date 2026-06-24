@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEO Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nebula-bg"></div>
+  <div id="planet">
+    <div class="planet-ring"></div>
+    <div class="planet-body"></div>
+  </div>
+  <canvas id="stars-canvas"></canvas>
+
+  <nav class="navbar">
+    <span class="logo">🌑 NEO TRACKER</span>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <header class="header" id="home">
+    <div class="header-content">
+      <h1 class="title">NEO TRACKER</h1>
+      <p class="subtitle">Track asteroids approaching Earth</p>
+      <span class="status-badge">
+        <span class="status-dot"></span> Live Tracking Active
+      </span>
+    </div>
+  </header>
+
+  <section class="search-section" id="dashboard">
+    <div class="search-bar">
+      <div class="input-group">
+        <label for="start-date">Start Date</label>
+        <input type="date" id="start-date" />
+      </div>
+      <div class="input-group">
+        <label for="end-date">End Date</label>
+        <input type="date" id="end-date" />
+      </div>
+      <button id="search-btn" class="search-btn">Search</button>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item"><span class="dot safe"></span> Safe</span>
+      <span class="legend-item"><span class="dot hazardous"></span> Hazardous</span>
+    </div>
+  </section>
+
+  <section class="cards-grid" id="cards-grid">
+    <!-- Cards will be inserted here by JavaScript -->
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>About NEO Tracker</h2>
+    <p>This tool uses NASA's Near Earth Object API to track asteroids approaching Earth, showing size, distance, and hazard status in real time.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
